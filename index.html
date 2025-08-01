@@ -1,51 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Beautiful Calculator</title>
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insha Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- ✅ Add This in <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- You can include icons via fontawesome if needed -->
 </head>
+
 <body>
-    <div class="container">
-        <h2>Simple Calculator</h2>
-        <div class="input">
-            <input id="nums" placeholder="Enter expression">
+
+    <!-- ==== Header/Navbar ==== -->
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ==== Home Section ==== -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Insha Fakhar</h1>
+            <h3>And I'm a <span>Frontend Developer</span></h3>
+            <p>I'm a self-taught web developer exploring beautiful UI design, frontend code, and bringing ideas to life.
+            </p>
+
+            <div class="social-icons">
+               
+                <a href="https://www.instagram.com/inshafakhar_?igsh=aHp2Z29peGQ4NWJt" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/InshaFakhar" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/insha-fakhar-206782338" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+            <a href="#about" class="btn">More About Me</a>
         </div>
-        <div class="btns">
-            <div>
-                <button class="btn">C</button>
-                <button class="btn">/</button>
-                <button class="btn">*</button>
-                <button class="btn">^</button>
-            </div>
-            <div>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">+</button>
-            </div>
-            <div>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">-</button>
-            </div>
-            <div>
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">,</button>
-            </div>
-            <div>
-                <button class="btn">%</button>
-                <button class="btn">0</button>
-                <button class="btn">.</button>
-                <button class="btn">=</button>
+
+        <div class="home-img">
+            <div class="glow-circle">
+                <img src="images/inshaa.jpg" alt="Insha Fakhar" />
             </div>
         </div>
+    </section>
+
+    <div class="line"></div>
+    <!-- ===== About Section ===== -->
+    <section class="about" id="about">
+
+        <div class="glow-circle">
+            <img src="images/inshaa.jpg" alt="Insha Fakhar" />
+        </div>
+        </div>
+
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                I'm Insha Fakhar, an aspiring Frontend Developer with a strong passion for design, creativity, and clean
+                code. Although I am still at the beginning of my professional journey, I’ve been actively learning
+                technologies like HTML, CSS, JavaScript, and responsive design to bring interactive websites to life. My
+                interest in web development started with a curiosity about how websites work, and since then, I’ve
+                dedicated myself to understanding how to build user-friendly, modern interfaces that not only look good
+                but also perform well. I believe in continuous learning, and every project I build helps me improve my
+                problem-solving skills and grow my technical knowledge. I’m excited to turn ideas into reality and
+                contribute to the digital world with meaningful designs and functionality.
+            </p>
+
+        </div>
+    </section>
+
+     <div class="line"></div>
+
+    <section class="skills" id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-container">
+    
+    <div class="skill-card">
+      <img src="images/html.png" alt="HTML">
+      <h3>HTML</h3>
+      <p>90%</p>
     </div>
-    <script src="script.js"></script>
+
+    <div class="skill-card">
+      <img src="images/css.jpg" alt="CSS">
+      <h3>CSS</h3>
+      <p>75%</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/javascript.webp" alt="JavaScript">
+      <h3>JavaScript</h3>
+      <p>60%</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/msword.webp" alt="MS.Word">
+      <h3>MS.Word</h3>
+      <p>70%</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/figma.jpg" alt="Figma">
+      <h3>UI/UX (Figma)</h3>
+      <p>Still Learning</p>
+    </div>
+
+  </div>
+</section>
+
+ <div class="line"></div>
+
+<section class="projects" id="projects">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-container">
+
+    <div class="project-card">
+      <img src="images/pro1.PNG" alt="Foodies Hub">
+      <div class="project-info">
+        <h3>Foodies Hub</h3>
+        <p>HTML • CSS • JS </p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/pro2.PNG" alt="Healthhorizons">
+      <div class="project-info">
+        <h3>HealthHorizons</h3>
+        <p>HTML • CSS • JS</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/pro3.PNG" alt="Calculator">
+      <div class="project-info">
+        <h3>Calculator</h3>
+        <p>HTML • CSS • JS</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+ <div class="line"></div>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">Get in Touch</h2>
+  <div class="contact-box">
+
+    <div class="contact-info">
+      <h3>Let's Connect</h3>
+      <p>Email: <a href="mailto:inshafakhar@gmail.com">inshafakhar@gmail.com</a></p>
+      <p>Phone: <a href="tel:+923001234567">+92 300 1234567</a></p>
+      <p>Location: Gujrat, Pakistan</p>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+ <div class="line"></div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 <b>Insha Fakhar.</b> Built with ❤️ using HTML & CSS.</p>
+
+    <div class="footer-social-icons">
+      <a href="https://linkedin.com/in/insha-fakhar-206782338" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/InshaFakhar" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/inshafakhar_?igsh=aHp2Z29peGQ4NWJt" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
 </body>
+
 </html>
