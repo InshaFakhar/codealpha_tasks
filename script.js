@@ -1,46 +1,27 @@
-function filterGallery(category) {
-  const allImages = document.querySelectorAll('.gallery-image');
-  const allButtons = document.querySelectorAll('nav li');
+let input = document.getElementById('nums');
+let buttons = document.querySelectorAll('.btn');
+let expression = "";
 
-  allImages.forEach(img => {
-    if (category === 'all' || img.classList.contains(category)) {
-      img.style.display = 'block';
-    } else {
-      img.style.display = 'none';
-    }
-  });
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        let value = button.innerText.trim();
 
-  allButtons.forEach(btn => btn.classList.remove('active'));
-  document.querySelector(`nav li[onclick="filterGallery('${category}')"]`).classList.add('active');
-}
-
-const images = Array.from(document.querySelectorAll('.gallery-image img'));
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-image');
-let currentIndex = 0;
-
-
-images.forEach((img, index) => {
-  img.addEventListener('click', () => {
-    openLightbox(index);
-  });
+        if (value === 'C') {
+            expression = "";
+            input.value = "";
+        } else if (value === '=') {
+            try {
+                expression = expression.replace(/\^/g, '**');
+                let result = eval(expression);
+                input.value = result;
+                expression = result.toString();
+            } catch {
+                input.value = "Error";
+                expression = "";
+            }
+        } else {
+            expression += value;
+            input.value = expression;
+        }
+    });
 });
-
-function openLightbox(index) {
-  currentIndex = index;
-  lightbox.style.display = 'flex';
-  lightboxImg.src = images[index].src;
-  document.body.style.overflow = 'hidden'; 
-}
-
-function closeLightbox() {
-  lightbox.style.display = 'none';
-  document.body.style.overflow = 'auto'; 
-}
-
-function changeImage(direction) {
-  currentIndex += direction;
-  if (currentIndex < 0) currentIndex = images.length - 1;
-  if (currentIndex >= images.length) currentIndex = 0;
-  lightboxImg.src = images[currentIndex].src;
-}
